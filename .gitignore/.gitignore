@@ -1,1 +1,3 @@
-./snakemake
+.snakemake/
+gatk_haplo.log
+gatk_haplo.log
