@@ -1,5 +1,1 @@
-samples: "/icgc/dkfzlsdf/analysis/B060/share/B060_Stuttgart_case/bam_files/WGS/blood/blood_XI046_ST_LFS_1_merged.mdup.bam"
-
-reference: "/icgc/dkfzlsdf/analysis/B260/resource/human/hg19/hg19_no_chr.fa"
-
-outdir: "/icgc/dkfzlsdf/analysis/B260/projects/chromothripsis_medulloblastoma/wgs/gatk_haplotypecaller_calls"
+reference: "/icgc/dkfzlsdf/analysis/B260/users/n790i/HumanRefGenome/GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fasta"
