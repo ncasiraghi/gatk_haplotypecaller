@@ -1,0 +1,9 @@
+#!/bin/sh 
+#BSUB -J gatk_haplo
+#BSUB -e gatk_haplo.log 
+#BSUB -o gatk_haplo.txt 
+
+module load anaconda
+source activate snakemake
+
+snakemake --use-conda
