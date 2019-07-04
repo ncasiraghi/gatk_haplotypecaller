@@ -1,7 +1,8 @@
 #!/bin/sh 
-#BSUB -J gatk_haplo
-#BSUB -e gatk_haplo.log 
-#BSUB -o gatk_haplo.txt 
+#BSUB -J gatk
+#BSUB -q verylong
+#BSUB -e gatk.log 
+#BSUB -o gatk.txt 
 
 module load anaconda
 source activate snakemake
