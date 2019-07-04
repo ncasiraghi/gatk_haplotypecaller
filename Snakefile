@@ -1,8 +1,11 @@
+import os
+
 configfile: "config.yaml"
 
-#bam="/icgc/dkfzlsdf/analysis/B060/share/B060_Stuttgart_case/bam_files/WGS/blood/blood_XI046_ST_LFS_1_merged.mdup.bam",
-
-SAMPLES = ['test_chr22']
+SAMPLES = []
+for bamfile in config['bam_samples']:
+    SAMPLES.append(os.path.splitext(os.path.basename(bamfile))[0])
+print(SAMPLES)
 
 rule all:
     input: expand("outs/calls/{sample}.vcf",sample=SAMPLES)
@@ -10,7 +13,7 @@ rule all:
 rule haplotype_caller:
     input:
         # single or list of bam files
-        bam="/icgc/dkfzlsdf/analysis/B260/users/n790i/{sample}.bam",
+        bam="/icgc/dkfzlsdf/analysis/B060/share/B060_Stuttgart_case/bam_files/WGS/blood/{sample}.bam",
         ref=config['reference']
         # known="dbsnp.vcf"  # optional
     output:
